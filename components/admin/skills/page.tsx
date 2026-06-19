@@ -47,6 +47,8 @@ export default async function SkillsPage() {
               No skills found.
             </p>
           ) : (
+            skills.map(
+
             skills.map((skill: any) => (
               <div
                 key={skill._id}
