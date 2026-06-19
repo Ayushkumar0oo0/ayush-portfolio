@@ -10,7 +10,6 @@ export default async function SkillsPage() {
 
   return (
     <div className="space-y-10">
-
       {/* Header */}
       <div>
         <h1 className="text-4xl font-black">
@@ -24,32 +23,26 @@ export default async function SkillsPage() {
 
       {/* Add Skill */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-
         <h2 className="text-2xl font-bold mb-6">
           Add New Skill
         </h2>
 
         <SkillForm action={createSkill} />
-
       </div>
 
       {/* Skills List */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-
         <h2 className="text-2xl font-bold mb-6">
           Existing Skills
         </h2>
 
         <div className="space-y-4">
-
           {skills.length === 0 ? (
             <p className="text-zinc-500">
               No skills found.
             </p>
           ) : (
-            skills.map(
-
-            skills.map((skill: any) => (
+            skills.map((skill: { _id: string; title: string; category: string }) => (
               <div
                 key={skill._id}
                 className="flex items-center justify-between p-5 rounded-2xl border border-zinc-800 bg-zinc-950"
@@ -79,11 +72,8 @@ export default async function SkillsPage() {
               </div>
             ))
           )}
-
         </div>
-
       </div>
-
     </div>
   );
 }
