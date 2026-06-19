@@ -1,3 +1,5 @@
+// /app/admin/skills/create/page.tsx
+
 export default function CreateSkillPage() {
   return (
     <div className="p-8">
